@@ -23,7 +23,7 @@ public class KM : MonoBehaviour
     public static KM instance = null;
 
 
-    public Body[] GetBobies()
+    public Body[] GetBodies()
     {
         return bodies;
     }
@@ -63,6 +63,64 @@ public class KM : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        IsAvailable = sensor.IsAvailable;
         
-    }
-}
+        if(bodyFrameReader != null)
+        {
+            var frame = bodyFrameReader.AcquireLatestFrame();
+
+            if(frame != null)
+            {
+                frame.GetAndRefreshBodyData(bodies);
+
+                foreach (var body in bodies.Where(b => b.IsTracked))
+                {
+                    IsAvailable = true;
+
+                    if(body.HandRightConfidence == TrackingConfidence.High && body.HandRightState == HandState.Lasso)
+                    {
+                        IsFire = true;
+                    }//if
+                    else
+                    {
+                        PaddlePosition = RescalingToRangeB(-1, 1, -8, 8, body.Lean.X);
+                        handXTest.text = PaddlePosition.ToString();
+                    }//else
+                }//foreach
+
+                frame.Dispose();
+                frame = null;
+
+            }//inner if
+
+        }//outer if 
+
+    }//Update
+
+    static float RescalingToRangeB(float scaleAStart, float scaleAEnd, float scaleBStart, float scaleBEnd, float valueA)
+    {
+        return (((valueA - scaleAStart) * (scaleBEnd - scaleBStart)) / (scaleAEnd - scaleBStart)) + scaleBStart;
+    }//RescalingToRangeB
+
+    void OnApplicationQuit()
+    {
+        if(bodyFrameReader != null)
+        {
+            bodyFrameReader.IsPaused = true;
+            bodyFrameReader.Dispose();
+            bodyFrameReader = null;
+        }//if 
+
+        if(sensor != null)
+        {
+            if(sensor.IsOpen)
+            {
+                sensor.Close();
+            }
+
+            sensor = null;
+        }//if
+
+    }//OnApplicationQuit
+
+}//KM

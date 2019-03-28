@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 840bc2dff8c7e51448cd87f7ebf2954e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - GestureTextGameObject: {instanceID: 0}
+  - ConfidenceTextGameObject: {instanceID: 0}
+  - Player: {fileID: 8967317185714481332, guid: 3fa6a8854fca01246b117ce9a9fefab0,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

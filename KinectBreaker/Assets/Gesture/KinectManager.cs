@@ -9,7 +9,7 @@ using System.Text;
 
 public class KinectManager : MonoBehaviour
 {
-    public Text GestureTextGameObject;
+   /* public Text GestureTextGameObject;
     public Text ConfidenceTextGameObject;
     public GameObject Player;
     private Paddle paddleScript;
@@ -215,5 +215,5 @@ public class KinectManager : MonoBehaviour
             this.kinectSensor = null;
         }
     }
-
+*/
 }

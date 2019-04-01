@@ -6,17 +6,18 @@ using UnityEngine.UI;
 
 public class GM : MonoBehaviour {
 
-    public int lives = 3;
+    public int lives = 5;
     public int bricks = 20;
-    public float resetDelay = 1f;
+    public float resetDelay = 5f;
     public Text livesText;
+    public Text scoreText;
     public GameObject gameOver;
     public GameObject youWon;
     public GameObject bricksPrefab;
     public GameObject paddle;
     public GameObject deathParticles;
     public static GM instance = null;
-
+    int score = 0;
     private GameObject clonePaddle;
 
     // Use this for initialization
@@ -78,6 +79,8 @@ public class GM : MonoBehaviour {
     public void DestroyBrick()
     {
         bricks--;
+        score += 10;
+        scoreText.text = "Score:" + score;
         CheckGameOver();
     }
 

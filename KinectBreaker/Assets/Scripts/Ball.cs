@@ -18,12 +18,13 @@ public class Ball : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (Input.GetButtonDown("Fire1") && ballInPlay == false)
+        if ((Input.GetButtonDown("Fire1") || KM.instance.IsFire) && ballInPlay == false)
         {
             transform.parent = null;
             ballInPlay = true;
             rb.isKinematic = false;
             rb.AddForce(new Vector3(ballInitialVelocity, ballInitialVelocity, 0));
+            //KM.instance.IsFire = false;
         }// if
 
     }// Update

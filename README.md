@@ -43,8 +43,11 @@ in either a seated or standing position. This would also allow the game to be pl
 ### Hardware
 This project was created using Kinect 2.0. The Kinect (codenamed Project Natal during development) is a line of motion sensing input devices produced by Microsoft. Initially, the Kinect was developed as a gaming accessory for Xbox 360 and Xbox One video game consoles and Microsoft Windows PCs. Based around a webcam-style add-on peripheral, it enabled users to control and interact with their console/computer without the need for a game controller, through a natural user interface using gestures and spoken commands.
 
+![kinect](https://github.com/rayman51/GBUi_KinectProject/blob/master/images/kinect.jpg)
+
 The Kinect also connects to your PC via the Kinect adaptor for windows. This requires a USB 3 port on your PC. Once the Kinect is set up on your machine Kinect will automatically install three pieces of software that are required to use the Kinect.
 
+![adaptor](https://github.com/rayman51/GBUi_KinectProject/blob/master/images/adaptor.jpg)
 * Kinect Studio v2.0
 * SDK Browser v2.0 (Kinect for windows)
 * Visual Gesture Builder

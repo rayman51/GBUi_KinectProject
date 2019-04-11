@@ -1,7 +1,8 @@
 # Gesture Based User Interface Project
 #### Authors: Ray Mannion & John Mannion
 #### Lecturer: Damien Costello
-#### Hardware/Software: Kinect 2.0, Visual Studio
+#### Hardware: Kinect v2.0 & Windows Adaptor for Kinect
+#### Software: Visual Studio & Unity 3d
 #### Project Title: Kinect-Breaker
 
 ### Requirements
@@ -47,19 +48,28 @@ Once the image data is streamed to your computer, it’s time for some heavy mat
 
 The Leap Motion Service is the software on your computer that processes the images. After compensating for background objects (such as heads) and ambient environmental lighting, the images are analyzed to reconstruct a 3D representation of what the device sees.
 
-* Kinect V2
+* Kinect v2.0
 
 ![kinect](https://github.com/rayman51/GBUi_KinectProject/blob/master/images/kinect.jpg)
 
 Field of View: 70˚ horizontal by 60˚ vertical
+
 Resolvable Depth: 0.8 m -> 4.0 m
+
 Colour Stream: 1920 x 1080 x 16 bpp 16:9 YUY2 @ 30 fps
+
 Depth Stream: 512 x 424 x 16 bpp, 13-bit depth
+
 Infrared Stream: 512 x 424, 11-bit dynamic range
+
 Registration: Colour <-> depth and active IR
+
 Audio Capture: 4-mic array returning 48K Hz audio
+
 Data Path: USB 3.0
+
 Latency: ~60 ms with processing
+
 Tilt Motor: No tilt motor
 
 * Hololens
@@ -86,20 +96,24 @@ This project was created using Kinect 2.0. The Kinect (codenamed Project Natal d
 
 ![kinect](https://github.com/rayman51/GBUi_KinectProject/blob/master/images/kinect.jpg)
 
-The Kinect also connects to your PC via the Kinect adaptor for windows. This requires a USB 3 port on your PC.
+The Kinect also connects to your PC via the Kinect adaptor for windows.
+
+#### Kinect Adaptor requires a USB 3 port on your PC.
 
 ![adaptor](https://github.com/rayman51/GBUi_KinectProject/blob/master/images/adaptor.jpg)
 
 ### Software
 To develop a project with Kinect 2.0 you must install the Kinect for windows [SDK 2.0](https://www.microsoft.com/en-us/download/details.aspx?id=44561). The SDK is freely available to download from Microsoft. To develop with [Unity 3d](https://unity3d.com/get-unity/download) you must also download the [KinectForWindows_UnityPro_2.0.1410](https://go.microsoft.com/fwlink/?LinkID=513177) plug in which again is also freely available to download from Microsoft. The IDE we choose to use was [Visual Studio](https://visualstudio.microsoft.com/) 2015.
 
- Once the Kinect is connected to your machine Kinect will automatically install three pieces of software that are required to use the Kinect.
+ Once the adaptor is connected to your machine it will automatically install three pieces of software that are required to use the Kinect.
 
 * Kinect Studio v2.0
 * SDK Browser v2.0 (Kinect for windows)
 * Visual Gesture Builder
 
 Once the Kinect software was installed we used the SDK browser to run the Kinect configuration tool to ensure it was correctly set up and ready to work with.
+
+In Unity 3d you must import the KinectForWindows_UnityPro_2.0.1410 plug in into your Unity project for the Kinect to work.
 
 ### Gestures
 The gestures we chose to use for this project are lean left and lean right. The reason we chose the
@@ -108,5 +122,11 @@ in either a seated or standing position. This would also allow the game to be pl
 
 We decided to create a series of custom gestures for our project using  Kinect studio and the visual gesture builder. This involved recording a lean to the left and a lean to the right, then a step to the left and a step to the right. This was followed by recording random gestures including the leans and steps to use as test data to train the Kinect to recognise the custom gestures.
 
-### Conclusions
+### Conclusions & Recommendations
 The Kinect v2.0 had a lot of potential when it was originally released in 2013 with the Xbox one. The success of the original Kinect sensor led Microsoft to further the development of gesture based technology and voice control. The progress of the device has since halted and Microsoft no longer ship the Kinect v2.0 with the consoles. As a result of this decision, which was probably down to the initial cost of the device, the Kinect is almost dead in the water. There are somewhat limited documentation and tutorials available when it comes to development with the Kinect v2.0 which is a shame as it was very enjoyable to create this project.
+
+I would recommend that Microsoft should encourage developers to use Kinect but it doesn't look likely as they have currently stopped manufacturing of the device, and the adaptor, in an attempt to explore their new mixed reality devices (HoloLens, HoloLens 2) which coincidently uses Kinect technologies for depth-sensing, and many laptops now ship with Windows Hello cameras that use the learnings of Kinect to recognize people’s faces.
+
+Unfortunately [Kinect](https://www.polygon.com/2017/10/25/16543192/kinect-discontinued-microsoft-announcement) and the [Windows Adaptor](https://www.polygon.com/2018/1/2/16842072/xbox-one-kinect-adapter-out-of-stock-production-ended) is no more.
+
+### Video Demonstration

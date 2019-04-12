@@ -120,7 +120,18 @@ The gestures we chose to use for this project are lean left and lean right. The 
 gestures was to allow a wide variety of players to play the game. This would allow a user to play the game
 in either a seated or standing position. This would also allow the game to be played by users who may not have the use of their arms as it relies on shoulder movement.
 
-We decided to create a series of custom gestures for our project using  Kinect studio and the visual gesture builder. This involved recording a lean to the left and a lean to the right, then a step to the left and a step to the right. This was followed by recording random gestures including the leans and steps to use as test data to train the Kinect to recognise the custom gestures.
+We decided to create a series of custom gestures for our project using  Kinect studio and the visual gesture builder. This involved recording a lean to the left and a lean to the right, then a step to the left and a step to the right. This video was used to train the database of gestures and done using the Kinect Studio Software.
+
+![kinectStudio](https://github.com/rayman51/GBUi_KinectProject/blob/master/KinectSreens/Screenshot1.png)
+#### Database
+After we had our training video, we moved to the gesture builder to create a solution. Here we imported our training video and created 2 gestures for the database.
+This was done by moving slowly through you training video and marking the points where you gesture begins and ends.
+
+![Gestures](https://github.com/rayman51/GBUi_KinectProject/blob/master/KinectSreens/Screenshot14.png)
+![Gestures2](https://github.com/rayman51/GBUi_KinectProject/blob/master/KinectSreens/Screenshot15.png)
+
+
+This was followed by recording random gestures including the leans and steps to use as test data to train the Kinect to recognise the custom gestures.
 
 ### Conclusions & Recommendations
 The Kinect v2.0 had a lot of potential when it was originally released in 2013 with the Xbox one. The success of the original Kinect sensor led Microsoft to further the development of gesture based technology and voice control. The progress of the device has since halted and Microsoft no longer ship the Kinect v2.0 with the consoles. As a result of this decision, which was probably down to the initial cost of the device, the Kinect is almost dead in the water. There are somewhat limited documentation and tutorials available when it comes to development with the Kinect v2.0 which is a shame as it was very enjoyable to create this project.

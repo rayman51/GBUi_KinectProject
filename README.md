@@ -89,14 +89,14 @@ For this project we used the Kinect 2.0 to create a gesture-based game using uni
 planning on recreating the classic Atari game super breakout. The game will include multiple rows of
 breakable blocks, within a structure, at the top of the screen. There will be a paddle at the bottom
 that will be controlled by the player by leaning either left or right in order to stop a ball from
-falling off the screen. The same ball will be used to try to destroy the bricks at the top of the screen.
+falling off the screen. The same ball will be used to try to destroy the bricks at the top of the screen. Initially the paddle will be controlled using the arrow keys on your keyboard. Once the game is created, our next step is too add custom gestures and movement using the Kinect.  
 
 ### Hardware
 This project was created using Kinect 2.0. The Kinect (codenamed Project Natal during development) is a line of motion sensing input devices produced by Microsoft. Initially, the Kinect was developed as a gaming accessory for Xbox 360 and Xbox One video game consoles and Microsoft Windows PCs. Based around a webcam-style add-on peripheral, it enabled users to control and interact with their console/computer without the need for a game controller, through a natural user interface using gestures and spoken commands.
 
 ![kinect](https://github.com/rayman51/GBUi_KinectProject/blob/master/images/kinect.jpg)
 
-The Kinect also connects to your PC via the Kinect adaptor for windows.
+The Kinect connects to your PC via the Kinect adaptor for windows.
 
 #### Kinect Adaptor requires a USB 3 port on your PC.
 
@@ -127,11 +127,27 @@ We decided to create a series of custom gestures for our project using  Kinect s
 After we had our training video, we moved to the gesture builder to create a solution. Here we imported our training video and created 2 gestures for the database.
 This was done by moving slowly through you training video and marking the points where you gesture begins and ends.
 
-![Gestures](https://github.com/rayman51/GBUi_KinectProject/blob/master/KinectSreens/Screenshot14.png)
+![Gestures](https://github.com/rayman51/GBUi_KinectProject/blob/master/KinectScreens/Screenshot14.png)
 ![Gestures2](https://github.com/rayman51/GBUi_KinectProject/blob/master/KinectScreens/Screenshot15.png)
 
+Once you have marked your gestures, the next step is to create multiple videos of people moving in front of the Kinect. These recordings should have random gestures including the leans and steps to use as test data to train the Kinect to recognise the custom gestures.
 
-This was followed by recording random gestures including the leans and steps to use as test data to train the Kinect to recognise the custom gestures.
+These videos are then added to the solution and the gesture builder will then analyse them to see if it can pick out the custom gestures that you tagged earlier. The results are displayed on screen and you can see where the software was right in picking the gestures and more importantly where the solution failed. The next step is to tell the solution where it failed and then analyse the video again until it picks the correct gestures.
+
+![Training](https://github.com/rayman51/GBUi_KinectProject/blob/master/KinectScreens/Screenshot20.png)
+
+After the training is done, there will be a solution with a file extension .gbd created in a Kinect/Repo folder in documents on your computer. This is the file containing your database of custom gestures.
+
+### Adding Gestures to the game
+Now that we had a functioning game and gestures it was time to add them. The first step is to add the Kinect 2.0 unity package along with the Kinect visual gesture builder package. It is recommended that these packages are added in this order, to avoid any later problems. This was done by opening unity and opening assets/ import package / custom packages and import Kinect unity packages and then the gesture builder package.
+
+![Packages](https://github.com/rayman51/GBUi_KinectProject/blob/master/KinectScreens/Screenshot22.png)
+
+Next we add our database to the game. In the assets of the game we created a streaming Assets folder with a gestureDB folder inside and added our .GBD files.
+
+![Packages](https://github.com/rayman51/GBUi_KinectProject/blob/master/KinectScreens/Screenshot23.png)
+
+Next step was to add a Kinect manager object and script to the game, along with a Gesture Detector script to allow the Kinect to talk to the game. This Gesture Detector script is freely available from Microsoft. in this script you may have to alter the file path and name of your database and gestures if you are creating your own. Next step was to alter the paddle script in order for the paddle to be moved by the Kinect movement. A small if statement was added telling the paddle to use the arrow keys OR use the gestures if an instance of the Kinect Manager was triggered.
 
 ### Conclusions & Recommendations
 The Kinect v2.0 had a lot of potential when it was originally released in 2013 with the Xbox one. The success of the original Kinect sensor led Microsoft to further the development of gesture based technology and voice control. The progress of the device has since halted and Microsoft no longer ship the Kinect v2.0 with the consoles. As a result of this decision, which was probably down to the initial cost of the device, the Kinect is almost dead in the water. There are somewhat limited documentation and tutorials available when it comes to development with the Kinect v2.0 which is a shame as it was very enjoyable to create this project.
@@ -141,3 +157,6 @@ I would recommend that Microsoft should encourage developers to use Kinect but i
 Unfortunately [Kinect](https://www.polygon.com/2017/10/25/16543192/kinect-discontinued-microsoft-announcement) and the [Windows Adaptor](https://www.polygon.com/2018/1/2/16842072/xbox-one-kinect-adapter-out-of-stock-production-ended) is no more.
 
 ### Video Demonstration
+[![VID1](https://img.youtube.com/vi/VID/0.jpg)](https://www.youtube.com/watch?v=Bkt4isJSdZ0)
+[![VID2](https://img.youtube.com/vi/VID/0.jpg)](https://www.youtube.com/watch?v=ah2YsMR97mg)
+[![VID3](https://img.youtube.com/vi/VID/0.jpg)](https://www.youtube.com/watch?v=PcHPukO7E30)

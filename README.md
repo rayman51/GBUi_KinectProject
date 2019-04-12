@@ -157,6 +157,10 @@ I would recommend that Microsoft should encourage developers to use Kinect but i
 Unfortunately [Kinect](https://www.polygon.com/2017/10/25/16543192/kinect-discontinued-microsoft-announcement) and the [Windows Adaptor](https://www.polygon.com/2018/1/2/16842072/xbox-one-kinect-adapter-out-of-stock-production-ended) is no more.
 
 ### Video Demonstration
-[![VID1](https://img.youtube.com/vi/VID/hqdefault.jpg)](https://www.youtube.com/watch?v=Bkt4isJSdZ0)
-[![VID2](https://img.youtube.com/vi/VID/hqdefault.jpg)](https://www.youtube.com/watch?v=ah2YsMR97mg)
-[![VID3](https://img.youtube.com/vi/VID/hqdefault.jpg)](https://www.youtube.com/watch?v=PcHPukO7E30)
+
+#### Video of project in action
+[![VID1](https://img.youtube.com/vi/Bkt4isJSdZ0/0.jpg)](https://www.youtube.com/watch?v=Bkt4isJSdZ0)
+#### 2nd Video of project in action
+[![VID2](https://img.youtube.com/vi/ah2YsMR97mg/0.jpg)](https://www.youtube.com/watch?v=ah2YsMR97mg)
+#### Screen cast of project with Kinect Studio open
+[![VID3](https://img.youtube.com/vi/PcHPukO7E30/0.jpg)](https://www.youtube.com/watch?v=PcHPukO7E30)

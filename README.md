@@ -122,13 +122,13 @@ in either a seated or standing position. This would also allow the game to be pl
 
 We decided to create a series of custom gestures for our project using  Kinect studio and the visual gesture builder. This involved recording a lean to the left and a lean to the right, then a step to the left and a step to the right. This video was used to train the database of gestures and done using the Kinect Studio Software.
 
-![kinectStudio](https://github.com/rayman51/GBUi_KinectProject/blob/master/KinectSreens/Screenshot1.png)
+![kinectStudio](https://github.com/rayman51/GBUi_KinectProject/blob/master/KinectScreens/Screenshot1.png)
 #### Database
 After we had our training video, we moved to the gesture builder to create a solution. Here we imported our training video and created 2 gestures for the database.
 This was done by moving slowly through you training video and marking the points where you gesture begins and ends.
 
 ![Gestures](https://github.com/rayman51/GBUi_KinectProject/blob/master/KinectSreens/Screenshot14.png)
-![Gestures2](https://github.com/rayman51/GBUi_KinectProject/blob/master/KinectSreens/Screenshot15.png)
+![Gestures2](https://github.com/rayman51/GBUi_KinectProject/blob/master/KinectScreens/Screenshot15.png)
 
 
 This was followed by recording random gestures including the leans and steps to use as test data to train the Kinect to recognise the custom gestures.

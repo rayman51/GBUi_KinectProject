@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GM : MonoBehaviour {
-
+    // declared variables for bricks,paddle and lives and UI elements and objects
     public int lives = 5;
     public int bricks = 20;
     public float resetDelay = 5f;
@@ -40,14 +40,14 @@ public class GM : MonoBehaviour {
     void CheckGameOver()
     {
         if (bricks < 1)
-        {
+        {   // if all the bricks are destroyed you win
             youWon.SetActive(true);
             Time.timeScale = .25f;
             Invoke("Reset", resetDelay);
         }
 
         if (lives < 1)
-        {
+        {   // if all the lives are gone you lose
             gameOver.SetActive(true);
             Time.timeScale = .25f;
             Invoke("Reset", resetDelay);
@@ -77,7 +77,7 @@ public class GM : MonoBehaviour {
     }
 
     public void DestroyBrick()
-    {
+    {   // each time a brick is destroyed adds score to total
         bricks--;
         score += 10;
         scoreText.text = "Score:" + score;

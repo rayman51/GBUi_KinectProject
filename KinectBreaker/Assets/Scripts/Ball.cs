@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Ball : MonoBehaviour {
-
+    // initial velocity of ball
     public float ballInitialVelocity = 600f;
 
 
@@ -17,7 +17,7 @@ public class Ball : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        // is the ball in play
         if ((Input.GetButtonDown("Fire1") || KM.instance.IsFire) && ballInPlay == false)
         {
             transform.parent = null;
